@@ -25,7 +25,8 @@ class Filme(Programa):
         super().__init__(nome,ano)
         self.duracao = duracao
 
-
+    def retorna_cadastro_diferenciado(self):
+        pass
 
 class Serie(Programa):
     def __init__(self,nome,ano,temporadas):
