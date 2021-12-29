@@ -19,29 +19,34 @@ class Programa:
     def dar_like(self):
         self._likes += 1
 
+    def imprime(self):
+        print({self._nome} - {self.ano} - {self._likes})
 
 class Filme(Programa):
     def __init__(self,nome,ano,duracao):
         super().__init__(nome,ano)
         self.duracao = duracao
 
-    def retorna_cadastro_diferenciado(self):
-        pass
+    def imprime(self):
+        print({self._nome} - {self.ano} - {self.duracao} - {self._likes})
 
 class Serie(Programa):
     def __init__(self,nome,ano,temporadas):
         super().__init__(nome, ano)
         self.temporadas = temporadas
 
-
+    def imprime(self):
+        print({self._nome} - {self.ano} - {self.temporadas} - {self._likes})
 
 
 filme = Filme('vingadores - guerra infinita', 2018,160)
 filme.dar_like()
 
-print("O filme se chama {} foi lançado em {} e tem a duração de {} minutos. Teve {} likes".format(filme.nome,filme.ano,filme.duracao,filme.likes))
-
 serie = Serie('Bad batch', 2021, 1)
 serie.dar_like()
 serie.dar_like()
-print("A serie é {} lançada no ano {} e que tem {} temporada(s).Teve {} likes".format(serie.nome,serie.ano,serie.temporadas,serie.likes))
+
+filmes_e_series = [filme,serie]
+
+for programa in filmes_e_series:
+    programa.imprime()
