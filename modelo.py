@@ -39,14 +39,32 @@ class Serie(Programa):
         return self._nome + " " + str(self.ano) + " " + str(self.temporadas) + " " + str(self._likes)
 
 
-filme = Filme('vingadores - guerra infinita', 2018,160)
-filme.dar_like()
+class Playlist:
+    def __init__(self,nome,programas):
+        self.nome = nome,
+        self.programas = programas
 
-serie = Serie('Bad batch', 2021, 1)
-serie.dar_like()
-serie.dar_like()
+    def tamanho(self):
+        return len(self.programas)
 
-filmes_e_series = [filme,serie]
 
-for programa in filmes_e_series:
+vingadores = Filme('vingadores - guerra infinita', 2018,160)
+vingadores.dar_like()
+
+tmep = Filme('Todo mundo em pânico', 1999,100)
+tmep.dar_like()
+
+bad_batch = Serie('Bad batch', 2021, 1)
+bad_batch.dar_like()
+bad_batch.dar_like()
+
+demolidor = Serie('Demolidor',2016,2)
+demolidor.dar_like()
+demolidor.dar_like()
+
+filmes_e_series = [vingadores,bad_batch,demolidor,tmep]
+
+fim_de_semana = Playlist('fim de semana',filmes_e_series)
+
+for programa in fim_de_semana.programas:
     print(programa)
