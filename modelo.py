@@ -51,7 +51,8 @@ class Playlist:
     def listagem(self):
         return self._programas
 
-    def tamanho(self):
+
+    def __len__(self):
         return len(self._programas)
 
 
@@ -74,9 +75,12 @@ filmes_e_series = [vingadores,bad_batch,tmep]
 
 fim_de_semana = Playlist('fim de semana',filmes_e_series)
 
-print("tamanho do playlist: {}".format(len(fim_de_semana.listagem)))
+print("tamanho do playlist: {}".format(len(fim_de_semana)))
 
 print(demolidor in fim_de_semana)
+
+print(f' o primeiro índice é : {fim_de_semana[0]}')
+
 
 for programa in fim_de_semana:
     print(programa)
