@@ -79,7 +79,7 @@ print("tamanho do playlist: {}".format(len(fim_de_semana)))
 
 print(demolidor in fim_de_semana)
 
-print(f' o primeiro índice é : {fim_de_semana[0]}')
+print(f'o primeiro índice é : {fim_de_semana[0]}')
 
 
 for programa in fim_de_semana:
