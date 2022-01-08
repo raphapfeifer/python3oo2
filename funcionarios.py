@@ -25,7 +25,7 @@ class Alura(Funcionario):
 
 class Hipster:
     def __str__(self):
-        return f'Hipester, {self.nome}'
+        return 'Hipester,{}'.format(self.nome)
 
 
 class Junior(Alura):
